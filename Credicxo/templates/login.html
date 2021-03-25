@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<br>
+
+<a href="http://127.0.0.1:8000/"><button type="button" class="btn btn-info">Home Page</button></a>
+
+<br>
+<br>
+
+<form action="login" method="POST">
+    {% csrf_token %}
+    <table align="center">
+        <tr><td>User Id</td><td><input type="email" name="email" placeholder="enter email"></td></tr>
+        <tr><td>Password</td><td><input type="password" name="password" placeholder="enter password" ></td></tr>
+        <tr><td>
+            <button type="submit" class="btn btn-primary">Sign in</button></td>
+        </tr>
+       <tr align="center"> <td><a href="fpassword">Forgot Password</a></td>
+           <td align="right"><a href="signup"> Sign Up</a></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

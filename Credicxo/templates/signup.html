@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<br>
+<br>
+<a href="http://127.0.0.1:8000/"><button type="button" class="btn btn-info">Home Page</button></a>
+<a href="login"><button type="button" class="btn btn-secondary">Login</button></a>
+<a href="fpassword"><button type="button" class="btn btn-success">Forgot Password</button></a>
+<br>
+<br>
+<form action="signup" method="POST">
+    {% csrf_token %}
+<div class="container mb-3 py-4">
+    <h1>Registration Page</h1>
+    <div class="form-group">
+    <label for="fname">First Name</label>
+    <input type="fname" class="form-control" id="fname" name="fname" placeholder="Enter Your Name">
+  </div>
+    <div class="form-group">
+    <label for="lname">Last Name</label>
+    <input type="lname" class="form-control" id="lname" name="lname" placeholder="Enter Your Father Name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+  </div>
+    <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password">
+</div>
+
+    <br><button class="btn btn-primary" type="submit">Submit</button>
+</div>
+
+  </form>
+
+</body>
+</html>
